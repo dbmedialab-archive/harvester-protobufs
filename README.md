@@ -6,6 +6,7 @@
 * [Development](https://github.com/dbmedialab/harvester-protofbufs#development)
     * [Requirements](https://github.com/dbmedialab/harvester-protofbufs#requirements)
     * [Setup](https://github.com/dbmedialab/harvester-protofbufs#setup)
+    * [Generate](https://github.com/dbmedialab/harvester-protofbufs#code-generation)
 * [Usage](https://github.com/dbmedialab/harvester-protofbufs#usage)
 
 ## Introduction
@@ -22,7 +23,10 @@ This is the protocol buffers that define the API for the [gRPC](https://grpc.io)
 ### Setup
 
 1. `git clone git@github.com:dbmedialab/harvester-protobufs.git`
-2. `make`
+
+### Code generation
+
+1. `make`
 
 ## Usage
 
