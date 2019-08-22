@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "no.medialaben.harvester.internal.api";
+option java_outer_classname = "HarvesterInternalApi";
+
+package api;
+
+// HarvesterInternalApi interface
+service HarvesterInternalApi {
+    /* ITEMS */
+    rpc FetchItemUpdates(FetchItemUpdatesRequest) returns (FetchItemUpdatesResponse) {}
+    rpc FetchItemTypes(FetchItemTypesRequest) returns (FetchItemTypesResponse) {}
+    rpc UpdateItemInterval(UpdateItemIntervalRequest) returns (UpdateItemIntervalResponse) {}
+    /* SOURCES */
+    rpc InsertSource(InsertSourceRequest) returns (InsertSourceResponse) {}
+    rpc UpdateSource(UpdateSourceRequest) returns (UpdateSourceResponse) {}
+    rpc UpdateSourceSet(UpdateSourceSetRequest) returns (UpdateSourceSetResponse) {}
+    rpc FetchSources(FetchSourcesRequest) returns (FetchSourcesResponse) {}
+    rpc FetchSourceSet(FetchSourceSetRequest) returns (FetchSourceSetResponse) {}
+}
+
+/* ITEMS */
+
+message FetchItemUpdatesRequest {
+    int32 amount = 1;
+}
+
+message FetchItemUpdatesResponse {
+    repeated UpdateItem items = 1;
+}
+
+message FetchItemTypesRequest {
+}
+
+message FetchItemTypesResponse {
+    repeated string types = 1;
+}
+
+message UpdateItemIntervalRequest {
+    string id = 1;
+    int32 interval = 2;
+    string timestamp = 3;
+    string type = 4;
+}
+
+message UpdateItemIntervalResponse {
+    int32 status = 1;
+    string message = 2;
+}
+
+message UpdateItem {
+    string id = 1;
+    int32 interval = 2;
+    string timestamp = 3;
+    string type = 4;
+}
+
+/* SOURCES */
+
+message InsertSourceRequest {
+    Source source = 1;
+}
+
+message InsertSourceResponse {
+    int32 status = 1;
+}
+
+message UpdateSourceRequest {
+    Source source = 1;
+}
+
+message UpdateSourceResponse {
+    int32 status = 1;
+}
+
+message UpdateSourceSetRequest {
+    string set_key = 2;
+    repeated string item_keys = 3; 
+}
+
+message UpdateSourceSetResponse {
+    int32 status = 1;
+}
+
+message FetchSourcesRequest {
+    int32 priority = 1;
+}
+
+message FetchSourcesResponse {
+    repeated Source sources = 1;
+}
+
+message FetchSourceSetRequest {
+    string set_key = 1;
+    repeated string item_keys = 2;
+}
+
+message FetchSourceSetResponse {
+    repeated string item_keys = 1;
+}
+
+message Source {
+    string key = 1;
+    string id = 2;
+    string name = 3;
+    int32 priority = 4;
+    string type = 5;
+    string url = 6;
+    string format = 7;
+    repeated string categories = 8;
+    string lookedat = 9;
+    int32 status = 10;
+}
+
