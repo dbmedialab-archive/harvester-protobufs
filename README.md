@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This is the protocol buffers that define the API for the [gRPC](https://grpc.io) server [harvester-protofbufs](https://github.com/dbmedialab/harvester-internal-api). It also contains the generated code needed for both the server and the clients.
+This is the protocol buffers that define the API for the [gRPC](https://grpc.io) server [harvester-internal-api](https://github.com/dbmedialab/harvester-internal-api). It also contains the generated code needed for both the server and the clients.
 
 ## Development
 
