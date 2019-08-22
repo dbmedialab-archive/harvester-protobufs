@@ -6,7 +6,7 @@
 * [Development](https://github.com/dbmedialab/harvester-protofbufs#development)
     * [Requirements](https://github.com/dbmedialab/harvester-protofbufs#requirements)
     * [Setup](https://github.com/dbmedialab/harvester-protofbufs#setup)
-    * [Generate](https://github.com/dbmedialab/harvester-protofbufs#code-generation)
+    * [Code generation](https://github.com/dbmedialab/harvester-protobufs#code-generation)
 * [Usage](https://github.com/dbmedialab/harvester-protofbufs#usage)
 
 ## Introduction
