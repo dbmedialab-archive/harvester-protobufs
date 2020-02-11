@@ -19,6 +19,7 @@ service HarvesterInternalApi {
     rpc FetchSources(FetchSourcesRequest) returns (FetchSourcesResponse) {}
     rpc FetchSourcesPagination(FetchSourcesPaginationRequest) returns (FetchSourcesPaginationResponse) {}
     rpc FetchSourceSet(FetchSourceSetRequest) returns (FetchSourceSetResponse) {}
+    rpc DeleteSource(DeleteSourceRequest) returns (DeleteSourceResponse) {}
 }
 
 /* ITEMS */
@@ -109,6 +110,14 @@ message FetchSourceSetRequest {
 
 message FetchSourceSetResponse {
     repeated string item_keys = 1;
+}
+
+message DeleteSourceRequest {
+    string id = 1;
+}
+
+message DeleteSourceResponse {
+    int32 status = 1;
 }
 
 message Source {
