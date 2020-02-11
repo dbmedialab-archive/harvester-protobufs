@@ -17,6 +17,7 @@ service HarvesterInternalApi {
     rpc UpdateSource(UpdateSourceRequest) returns (UpdateSourceResponse) {}
     rpc UpdateSourceSet(UpdateSourceSetRequest) returns (UpdateSourceSetResponse) {}
     rpc FetchSources(FetchSourcesRequest) returns (FetchSourcesResponse) {}
+    rpc FetchSourcesPagination(FetchSourcesPaginationRequest) returns (FetchSourcesPaginationResponse) {}
     rpc FetchSourceSet(FetchSourceSetRequest) returns (FetchSourceSetResponse) {}
 }
 
@@ -89,6 +90,16 @@ message FetchSourcesRequest {
 
 message FetchSourcesResponse {
     repeated Source sources = 1;
+}
+
+message FetchSourcesPaginationRequest {
+    string type = 1;
+    int32 skip = 2;
+    int32 offset = 3;
+}
+
+message FetchSourcesPaginationResponse {
+    repeated Source sources = 1;    
 }
 
 message FetchSourceSetRequest {
