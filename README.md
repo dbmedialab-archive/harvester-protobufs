@@ -27,8 +27,3 @@ Protocol buffers for Harvester [gRPC](https://grpc.io) server.
 ### Code generation
 
 1. `make`
-
-## Usage
-
-TODO
-
