@@ -96,11 +96,12 @@ message FetchSourcesResponse {
 message FetchSourcesPaginationRequest {
     string type = 1;
     int32 skip = 2;
-    int32 offset = 3;
+    string cursor = 3;
 }
 
 message FetchSourcesPaginationResponse {
-    repeated Source sources = 1;    
+    repeated Source sources = 1;
+    string cursor = 2;
 }
 
 message FetchSourceSetRequest {
