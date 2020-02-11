@@ -95,7 +95,7 @@ message FetchSourcesResponse {
 
 message FetchSourcesPaginationRequest {
     string type = 1;
-    int32 skip = 2;
+    int32 limit = 2;
     int32 offset = 3;
 }
 
