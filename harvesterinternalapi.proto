@@ -114,7 +114,7 @@ message FetchSourceSetResponse {
 }
 
 message DeleteSourceRequest {
-    string id = 1;
+    string key = 1;
 }
 
 message DeleteSourceResponse {
