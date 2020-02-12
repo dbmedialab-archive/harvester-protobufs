@@ -123,9 +123,10 @@ message DeleteSourceResponse {
 }
 
 message SearchSourcesRequest {
-    string name = 1;
-    string url = 2;
-    repeated string categories = 3;
+    string type = 1;
+    string name = 2;
+    string url = 3;
+    repeated string categories = 4;
 }
 
 message SearchSourcesResponse {
