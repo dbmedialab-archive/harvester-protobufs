@@ -166,12 +166,11 @@ message InsertTagRequest {
 }
 
 message InsertTagResponse{
-    string id = 1;
-    string tag = 2;
+    Tag tag = 1;
 }
 
 message DeleteTagRequest {
-    string id = 1;
+    int64 id = 1;
 }
 
 message DeleteTagResponse {
@@ -187,6 +186,6 @@ message SearchTagsResponse {
 }
 
 message Tag {
-    string id = 1;
+    int64 id = 1;
     string tag = 2;
 }
