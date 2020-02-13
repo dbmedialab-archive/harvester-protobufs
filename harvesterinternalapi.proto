@@ -21,6 +21,11 @@ service HarvesterInternalApi {
     rpc FetchSourceSet(FetchSourceSetRequest) returns (FetchSourceSetResponse) {}
     rpc DeleteSource(DeleteSourceRequest) returns (DeleteSourceResponse) {}
     rpc SearchSources(SearchSourcesRequest) returns (SearchSourcesResponse) {}
+    /* TAGS */
+    rpc FetchTags(FetchTagsRequest) returns (FetchTagsResponse) {}
+    rpc InsertTag(InsertTagRequest) returns (InsertTagResponse) {}
+    rpc DeleteTag(DeleteTagRequest) returns (DeleteTagResponse) {}
+    rpc SearchTags(SearchTagsRequest) returns (SearchTagsResponse) {}
 }
 
 /* ITEMS */
@@ -146,3 +151,42 @@ message Source {
     int32 status = 10;
 }
 
+
+/* TAGS */
+
+message FetchTagsRequest {
+}
+
+message FetchTagsResponse {
+    repeated Tag tags = 1;
+}
+
+message InsertTagRequest {
+    string tag = 1;
+}
+
+message InsertTagResponse{
+    string id = 1;
+    string tag = 2;
+}
+
+message DeleteTagRequest {
+    string id = 1;
+}
+
+message DeleteTagResponse {
+    int32 status = 1;
+}
+
+message SearchTagsRequest {
+    string tag = 1;
+}
+
+message SearchTagsResponse {
+    repeated Tag tags = 1;
+}
+
+message Tag {
+    string id = 1;
+    string tag = 2;
+}
