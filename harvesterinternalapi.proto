@@ -12,6 +12,7 @@ service HarvesterInternalApi {
     rpc FetchItemUpdates(FetchItemUpdatesRequest) returns (FetchItemUpdatesResponse) {}
     rpc FetchItemTypes(FetchItemTypesRequest) returns (FetchItemTypesResponse) {}
     rpc UpdateItemInterval(UpdateItemIntervalRequest) returns (UpdateItemIntervalResponse) {}
+    rpc AddItem(AddItemRequest) returns (AddItemResponse) {}
     /* SOURCES */
     rpc InsertSource(InsertSourceRequest) returns (InsertSourceResponse) {}
     rpc UpdateSource(UpdateSourceRequest) returns (UpdateSourceResponse) {}
@@ -55,6 +56,15 @@ message UpdateItemIntervalRequest {
 message UpdateItemIntervalResponse {
     int32 status = 1;
     string message = 2;
+}
+
+message AddItemRequest {
+    string type = 1;
+    string item = 2;
+}
+
+message AddItemResponse {
+    int32 status = 1;
 }
 
 message UpdateItem {
