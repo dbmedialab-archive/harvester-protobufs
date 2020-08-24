@@ -1,3 +1,7 @@
+# Editors
+/.idea/
+*.vim
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
